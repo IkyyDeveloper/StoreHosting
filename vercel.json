@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "server.js", "use": "@vercel/node" },
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/send-telegram", "dest": "/server.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": "7669692836:AAERT-cCGcX01suH6F4mPsQT1nyjtxigeoE",
+    "TELEGRAM_CHAT_ID": "7618167160"
+  }
+}
